@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+
+import sys
+
+file_name = sys.argv[0]
+file_one = sys.argv[1]
+file_two = sys.argv[2]
+
+print(file_name)
+print(file_one)
+print(file_two)
+
+print()
+
+file = open(file_name, "r")
+code = file.readlines()
+print(code)
+file.close()

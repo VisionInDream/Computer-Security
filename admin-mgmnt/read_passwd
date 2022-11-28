@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+
+file = open("/etc/passwd", "r")
+
+for line in file.readlines():
+    print(line)
+    input()
+file.close()
+print("<<<<<<<<<<<<<DONE>>>>>>>>>>>")

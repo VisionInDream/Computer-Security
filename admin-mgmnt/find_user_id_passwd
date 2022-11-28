@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+
+import sys
+
+user_name = sys.argv[1]
+
+user_id = ""
+
+file = open("/etc/passwd", "r")
+
+for line in file.readlines():
+    passwd_list = line.split(":")
+    if user_name == passwd_list[0]:
+        user_id = passwd_list[2]
+        print(passwd_list)
+
+if user_id == "":
+    print(f"{user_name} has no user_id: (ID NOT FOUND)")
+else:
+   print(f"{user_name} has user_id: {user_id}") 
+
+file.close()
